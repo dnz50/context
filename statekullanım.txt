@@ -1,0 +1,37 @@
+import { useState } from 'react';
+import './App.css';
+
+function App() {
+
+  const [books,setBooks]=useState([])
+  const [book,setBook]=useState("")
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    setBooks([...books,book])
+
+    setBook("")
+  }
+  return (
+    <div className="App">
+      <h1>Books</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="text"
+        onChange={(e=>setBook(e.target.value))}
+        value={book} />
+
+        <button disabled={!book}
+        type='submit'>Submit</button>
+      </form>
+
+      <ol>
+        {books.map((item)=>(
+          <li>{item}</li>
+        ))}
+      </ol>
+
+    </div>
+  );
+}
+
+export default App;

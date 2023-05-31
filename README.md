@@ -1,3 +1,9 @@
+# Context and useReducer 
+
+we use useContext, bootstrap, useNavigate in this simple sports wear e-commerce website
+
+![Alt text](src/assets/Animation.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
